@@ -1,5 +1,6 @@
 import { words } from "../../../constants/index.js";
 import Button from "../Button.jsx";
+import HeroExp from "../HeroModels/HeroExp.jsx";
 
 function Hero() {
   return (
@@ -48,6 +49,12 @@ function Hero() {
           </div>
         </header>
         {/* Hero image goes here */}
+
+        <figure>
+          <div className="hero-3d-layout">
+            <HeroExp />
+          </div>
+        </figure>
       </div>
     </section>
   );
