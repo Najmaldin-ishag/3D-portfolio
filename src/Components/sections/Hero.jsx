@@ -1,4 +1,5 @@
 import { words } from "../../../constants/index.js";
+import AnimatedCounter from "../AnimatedCounter.jsx";
 import Button from "../Button.jsx";
 import HeroExp from "../HeroModels/HeroExp.jsx";
 import { useGSAP } from "@gsap/react";
@@ -74,6 +75,7 @@ function Hero() {
           </div>
         </figure>
       </div>
+      <AnimatedCounter />
     </section>
   );
 }
