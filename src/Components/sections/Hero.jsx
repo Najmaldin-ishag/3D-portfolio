@@ -47,8 +47,8 @@ function Hero() {
             />
           </div>
         </header>
+        {/* Hero image goes here */}
       </div>
-      {/* Hero image goes here */}
     </section>
   );
 }
