@@ -17,11 +17,17 @@ function ExperienceSection() {
 
         <div className="mt-32 relative">
           <div className="relative z-50 xl:space-x-32 space-y-10">
-            {expCards.map((card) => (
+            {expCards.map((card, index) => (
               <div key={card.title} className="exp-card-wrapper">
                 <div className="xl:w-2/6">
-                  <GlowCard></GlowCard>
+                  <GlowCard card={card} index={index}>
+                    <div>
+                      <img src={card.imgPath} alt={card.title} />
+                    </div>
+                  </GlowCard>
                 </div>
+
+                <div className="xl:w-4/6"></div>
               </div>
             ))}
           </div>
