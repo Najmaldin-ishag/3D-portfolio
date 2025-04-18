@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 import TitleHeader from "../../Components/TitleHeader";
-import ContactExperience from "../../Components/Models/contact/ContactExperience";
+import ContactExperience from "../../components/models/contact/ContactExperience";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -20,8 +20,8 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true); // Show loading state
 
-    setLoading(true);
     try {
       await emailjs.sendForm(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -30,15 +30,12 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
       );
 
-      setForm({
-        name: "",
-        email: "",
-        message: "",
-      });
+      // Reset form and stop loading
+      setForm({ name: "", email: "", message: "" });
     } catch (error) {
-      console.log(error);
+      console.error("EmailJS Error:", error); // Optional: show toast
     } finally {
-      setLoading(false);
+      setLoading(false); // Always stop loading, even on error
     }
   };
 

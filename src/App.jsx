@@ -7,6 +7,7 @@ import ExperienceSection from "./Components/sections/ExperienceSection";
 import TechStack from "./Components/sections/TechStack";
 import Testimonials from "./Components/sections/Testimonials";
 import Contact from "./Components/sections/Contact";
+import Footer from "./Components/sections/Footer";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <TechStack />
       <Testimonials />
       <Contact />
+      <Footer />
     </>
   );
 }
