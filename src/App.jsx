@@ -6,6 +6,7 @@ import FeaturedCards from "./Components/FeaturedCards";
 import ExperienceSection from "./Components/sections/ExperienceSection";
 import TechStack from "./Components/sections/TechStack";
 import Testimonials from "./Components/sections/Testimonials";
+import Contact from "./Components/sections/Contact";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <ExperienceSection />
       <TechStack />
       <Testimonials />
+      <Contact />
     </>
   );
 }
