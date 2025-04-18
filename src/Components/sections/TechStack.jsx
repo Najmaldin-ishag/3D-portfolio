@@ -1,4 +1,4 @@
-import { techStackIcons, techStackImgs } from "../../../constants";
+import { techStackIcons } from "../../../constants";
 import TechIcon from "../Models/TechLogos/TechIcon";
 import TitleHeader from "../TitleHeader";
 // import { gsap } from "@gsap/react";
